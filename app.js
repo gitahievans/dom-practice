@@ -27,14 +27,20 @@ blackColor.addEventListener("click", () => {
 
 // 2. Implement the Cart Button
 // We 1st create a fucntion that hides the cart button and displays the feedback button. We will then pass that fucntion to the cart eventlistener as the 2nd parameter (handler).
-const hideCartShowFeedback = () => {
+const cart = () => {
   cartButton.style.display = "none";
   feedBackBtn.style.display = "block";
 };
 
-cartButton.addEventListener("click", hideCartShowFeedback);
+cartButton.addEventListener("click", cart);
 
 // <<-commit->>
+
 // 3. Implement the Feedback Button
+const feedback = () => {
+  feedBackBtn.style.display = "none";
+  cartButton.style.display = "block";
+};
+feedBackBtn.addEventListener("click", feedback);
 
 // <<-commit->>
